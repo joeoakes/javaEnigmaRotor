@@ -43,7 +43,7 @@ public class EnigmaMachine {
         // Example rotor settings
         // ABCDEFGHIJKLMNOPQRSTUVWXYZ
         // EKMFLGDQVZNTOWYHXUSPAIBRCJ
-        // ZYXWVUTSRQPONMLKJIHGFEDCBA  //reverse
+        // ZYXWVUTSRQPONMLKJIHGFEDCBA  //reverse alphabet
         Rotor rotor = new Rotor("EKMFLGDQVZNTOWYHXUSPAIBRCJ");
 
         // Example reflector settings
@@ -55,6 +55,7 @@ public class EnigmaMachine {
 
         // Example encryption
         char letterToEncrypt = 'A';
+        System.out.println("Letter to encrypt: " + letterToEncryp);
         char encryptedLetter = enigmaMachine.encrypt(letterToEncrypt);
         System.out.println("Encrypted letter: " + encryptedLetter);
     }
