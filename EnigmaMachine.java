@@ -55,7 +55,7 @@ public class EnigmaMachine {
 
         // Example encryption
         char letterToEncrypt = 'A';
-        System.out.println("Letter to encrypt: " + letterToEncryp);
+        System.out.println("Letter to encrypt: " + letterToEncrypt);
         char encryptedLetter = enigmaMachine.encrypt(letterToEncrypt);
         System.out.println("Encrypted letter: " + encryptedLetter);
     }
