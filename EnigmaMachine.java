@@ -41,11 +41,14 @@ public class EnigmaMachine {
         plugboardSettings.put('C', 'D');
 
         // Example rotor settings
+        // ABCDEFGHIJKLMNOPQRSTUVWXYZ
+        // EKMFLGDQVZNTOWYHXUSPAIBRCJ
+        // ZYXWVUTSRQPONMLKJIHGFEDCBA  //reverse
         Rotor rotor = new Rotor("EKMFLGDQVZNTOWYHXUSPAIBRCJ");
 
         // Example reflector settings
-        // ABCDEFGHIJKLMNOPQRSTUVwXYZ
-        // 12345678901234567890123456
+        // ABCDEFGHIJKLMNOPQRSTUVWXYZ
+        // YRUHQSLDPXNGOKMIEBFZCWVJAT
         Reflector reflector = new Reflector("YRUHQSLDPXNGOKMIEBFZCWVJAT");
 
         EnigmaMachine enigmaMachine = new EnigmaMachine(plugboardSettings, rotor, reflector);
