@@ -20,13 +20,13 @@ public class EnigmaMachine {
         rotor.rotate();
 
         // Encryption process: plugboard -> rotor -> reflector -> rotor -> plugboard
-        System.out.println("letter: " + processedLetter);
+        System.out.println("letter after plugboard: " + processedLetter);
         processedLetter = rotor.substitute(processedLetter);
-        System.out.println("letter: " + processedLetter);
+        System.out.println("letter after rotor 1: " + processedLetter);
         processedLetter = reflector.substitute(processedLetter);
-        System.out.println("letter: " + processedLetter);
+        System.out.println("letter after reflector: " + processedLetter);
         processedLetter = rotor.reverseSubstitute(processedLetter);
-        System.out.println("letter: " + processedLetter);
+        System.out.println("letter after rotor 1: " + processedLetter);
 
         // Pass through plugboard again
         processedLetter = plugboard.getOrDefault(processedLetter, processedLetter);
@@ -44,6 +44,8 @@ public class EnigmaMachine {
         Rotor rotor = new Rotor("EKMFLGDQVZNTOWYHXUSPAIBRCJ");
 
         // Example reflector settings
+        // ABCDEFGHIJKLMNOPQRSTUVwXYZ
+        // 12345678901234567890123456
         Reflector reflector = new Reflector("YRUHQSLDPXNGOKMIEBFZCWVJAT");
 
         EnigmaMachine enigmaMachine = new EnigmaMachine(plugboardSettings, rotor, reflector);
