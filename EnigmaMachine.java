@@ -22,9 +22,15 @@ public class EnigmaMachine {
         // Encryption process: plugboard -> rotor -> reflector -> rotor -> plugboard
         System.out.println("letter after plugboard: " + processedLetter);
         processedLetter = rotor.substitute(processedLetter);
+        System.out.println("rotor 1: ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+        System.out.println("rotor 1: EKMFLGDQVZNTOWYHXUSPAIBRCJ");
         System.out.println("letter after rotor 1: " + processedLetter);
+        System.out.println("rotor 1: ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+        System.out.println("rotor 1: YRUHQSLDPXNGOKMIEBFZCWVJAT");
         processedLetter = reflector.substitute(processedLetter);
         System.out.println("letter after reflector: " + processedLetter);
+        System.out.println("rotor 1: ZYXWVUTSRQPONMLKJIHGFEDCBA");
+        System.out.println("rotor 1: EKMFLGDQVZNTOWYHXUSPAIBRCJ");
         processedLetter = rotor.reverseSubstitute(processedLetter);
         System.out.println("letter after rotor 1: " + processedLetter);
 
